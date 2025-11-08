@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content%}
+    <h2>О нас</h2>
+
+    <p>Наш приют создан, чтобы дарить шанс на новую жизнь тем, кто остался без дома. Мы спасаем, лечим и заботимся о животных, пока не найдём им любящую семью. Наша миссия — помочь каждому питомцу и вдохновить людей на доброту и ответственность.</p>
+
+              <div class="employee-list">
+            {% for employee in employees %}
+            
+              
+              <div class="employee-profile">
+                
+                  <h3>{{employee.name}}</h3>
+                  <img src="/media/{{employee.image}}" alt="1">
+                  <p class="position">{{employee.position}} </p>
+                  
+              </div>
+            
+              {% endfor %}
+        </div>
+    {% endblock%}

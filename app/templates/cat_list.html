@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content%}
+
+    <div class="container">
+          <h2>Все кошечки</h2>
+          <div class="cat-list">
+            {% for cat in cats %}
+            
+              
+              <div class="cat-profile">
+                  <img src="/media/{{cat.image}}" alt="Cat">
+                  <h3>{{cat.name}}</h3>
+                  <p class="discription">{{cat.discription}} </p>
+              </div>
+            
+              {% endfor %}
+        </div>
+    </div>
+    
+    {% endblock%}
