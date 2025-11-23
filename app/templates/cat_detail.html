@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content%}
+
+<div class="cat-page-containercontainer">
+        <div class="cat-details-section">
+            <h3>{{cat.name}}</h3>
+            <p class="discription">{{cat.discription}} </p>
+        </div>
+        <div class="cat-image-section">
+            <img src="/media/{{cat.image}}" alt="Cat">
+        </div>
+        <form method="post" class="application">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Подать заявку</button>
+    </form>
+    </div>
+
+
+{% endblock%} 

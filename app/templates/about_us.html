@@ -4,12 +4,12 @@
     <h2>О нас</h2>
 
     <p>Наш приют создан, чтобы дарить шанс на новую жизнь тем, кто остался без дома. Мы спасаем, лечим и заботимся о животных, пока не найдём им любящую семью. Наша миссия — помочь каждому питомцу и вдохновить людей на доброту и ответственность.</p>
-
-              <div class="employee-list">
+    
+              <div class="list">
             {% for employee in employees %}
             
               
-              <div class="employee-profile">
+              <div class="profile">
                 
                   <h3>{{employee.name}}</h3>
                   <img src="/media/{{employee.image}}" alt="1">
@@ -18,5 +18,19 @@
               </div>
             
               {% endfor %}
-        </div>
+              </div>
+              <p class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11910.99372080813!2d26.534056144147346!3d55.87476114988316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2slv!4v1762701218665!5m2!1sru!2slv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </p>
+              <div class="contacts">
+              <h3>Контакты</h3>
+              <p>Адрес: Andreja Pumpura iela 55</p>
+              <p>Телефон: +371 23456789</p>
+              <p>Email: info@example.com</p>
+              <p>График работы: Пн-Сб, 9.00-18.00</p>
+              <h3>Мы в социальных сетях:</h3>
+              <p>Instagram: @example</p>
+              <p>Telegram: t.me/example</p>
+              </div>
+        
     {% endblock%}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content%}
+    <h2>Как помочь</h2>
+    <h3>Реквизиты для пожертвований:</h3>
+    <p>Банковские реквизиты: ...</p>
+
+    <form method="post" class="volunteer">
+        <h3 class="forma">Форма для записи в волонтёры:</h3>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    {% endblock%} 

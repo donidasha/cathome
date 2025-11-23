@@ -17,4 +17,23 @@ class Employee(models.Model):
     def __str__(self):
         return self.name
     
+class Volunteer(models.Model):
+        name = models.CharField(max_length=150)
+        phone_number = models.CharField(max_length=150)
+        email = models.EmailField()
+        
+        def __str__(self):
+                return self.name
+        
+class Application(models.Model):
+        name = models.CharField(max_length=150)
+        email = models.EmailField()
+        phone_number = models.CharField(max_length=150)
+        comment = models.TextField()
+        cat = models.ForeignKey(Cat, on_delete=models.CASCADE)
+        
+        def __str__(self):
+            return self.name
+        
+
     
